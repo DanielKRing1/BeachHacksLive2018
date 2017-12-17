@@ -1,3 +1,254 @@
+
+Attachment WIN_20171212_20_33_51_ProTrim.mp4 successfully uploaded and added.Conversation opened. 3 messages. All messages read.
+
+
+Skip to content
+Using Gmail with screen readers
+2
+Search
+
+
+
+Click here to enable desktop notifications for Gmail.   Learn more  Hide
+Gmail
+COMPOSE
+Labels
+Inbox (4)
+Starred
+Important
+Sent Mail
+Drafts (10)
+Categories
+Notes
+More
+Hangouts
+
+
+
+
+  More
+6 of 2,269
+
+Expand all Print all In new window
+Beach Hacks Live NOT labeled
+Inbox
+x
+
+Asianpersonn
+​ background.jpg ​​ campus_map.png ​​ csulb_pyramid.jpg ​​ firebase-messaging...
+10:44 PM (18 hours ago)
+
+Asianpersonn
+Attachments10:55 PM (18 hours ago)
+
+to me, Daniel
+Check these files instead, more organized.
+App.js is in a txt file
+
+11 Attachments
+
+
+Victoria Hong <victoriahong96@gmail.com>
+11:02 PM (18 hours ago)
+
+to Asianpersonn
+ty
+
+
+Click here to Reply or Forward
+1.31 GB (8%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 50 minutes ago
+Details
+
+
+
+body {
+  background: url("../background.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.cool {
+  text-align: center;
+  margin: auto;
+}
+
+/* NAVIGATION */
+.nav.tab-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+a {
+  display: block;
+}
+
+.tab-nav-item.active {
+  background-color:  Pink;
+  color: #ff69b4;
+}
+.tab-nav-item:hover {
+  border-color: Black;
+  background-color: #ccffff;
+  color: Cyan;
+}
+
+.tab-nav-item.list-group-item:first-child {
+  border-top-right-radius: 0px;
+}
+.tab-nav-item.list-group-item:last-child {
+  margin-bottom: -1px;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.tab-nav-item {
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  border-style: none;
+}
+.tab-nav-item a {
+  font-size: 15px;
+  text-align: center;
+  border-width: medium;
+}
+a {
+ text-decoration: none;
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+.tab-nav-link.active {
+  background-color:  Pink;
+  color: #ff69b4;
+  border-color: Gray;
+  border-width: thin;
+}
+
+/* TABS */
+.tab-title {
+  color: Black;
+}
+.tab-container {
+  background: url("../csulb_pyramid.jpg") no-repeat center top;
+  padding: 15px 35px 15px 35px;
+}
+
+.btn.form-control {
+  outline: none;
+  background-color: transparent;
+  color: Gray;
+}
+
+/* ANNOUNCEMENTS */
+.anncmnt {
+  color: DarkGray;
+  display: inline-block;
+}
+.anncmnt-item {
+  display: inline;
+}
+.anncmnt-add-btn {
+
+}
+
+.anncmnt-form {
+  text-align: center;
+}
+#anncmnt-input {
+  text-align: center;
+}
+#del-anncmnt-btn {
+  align: right;
+}
+
+/* MAPS */
+.campus-map-img {
+  width: 100%;
+}
+.venue-map-img {
+  width: 100%;
+}
+
+.map-nav-item {
+  display: inline-block;
+}
+.map-nav-item.active {
+  background-color:  Pink;
+  color: #ff69b4;
+}
+.map-nav-item:hover {
+  border-color: Black;
+  background-color: LightGray;
+  color: Cyan;
+}
+
+/* MENTOR */
+/* Admin */
+.mentor {
+  color: DarkGray;
+  display: inline-block;
+}
+
+.availability-btn {
+  margin: 10px 20px;
+  width: 40%;
+}
+.delete-mentor-btn {
+  margin: 10px;
+}
+
+/* General User */
+#mentor-row {
+  height: 350px;
+}
+#pending-request-group {
+  overflow-y: auto;
+}
+#mentor-req-table-form {
+  float: right;
+}
+
+
+/* The alert message box */
+.notification {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+styles.css
+Open with
+Displaying styles.css.
 .container {
   width:100%;
 

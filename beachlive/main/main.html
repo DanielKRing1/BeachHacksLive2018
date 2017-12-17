@@ -1,4 +1,3 @@
-
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
@@ -8,13 +7,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item" ui-sref-active="active" >
+          <!--<a class="nav-link" href="schedule/schedule.html">Schedule</a>-->
+          <a ui-sref=".announcements" ui-sref-active="active" active="isActive" ng-init="isActive=false">Announcements</a>
+          <!--<a class="nav-link" href="schedule/schedule.html">Schedule</a>-->
         </li>
          <!--<div ng-include='ListPage'>-->
-        <li class="nav-item">
+        <li class="nav-item" ui-sref-active="active" >
           <!--<a class="nav-link" href="schedule/schedule.html">Schedule</a>-->
-          <a ui-sref=".schedule">Schedule</a>
+          <a ui-sref=".schedule" ui-sref-active="active" active="isActive" ng-init="isActive=false">Schedule</a>
           <!--<a class="nav-link" href="schedule/schedule.html">Schedule</a>-->
         </li>
         <li class="nav-item">
@@ -43,7 +44,7 @@
   </div>
 </header>
 
-<div ui-view></div>
+<div ng-app="myApp" ui-view></div>
 
 <!-- Footer -->
 <footer>

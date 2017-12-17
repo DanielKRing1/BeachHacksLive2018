@@ -1,5 +1,4 @@
-
-
+<meta name="author" content="">
 <!DOCTYPE html>
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
@@ -10,7 +9,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>Clean Blog - Start Bootstrap Theme</title>
 
@@ -28,8 +26,6 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-
-
 <body>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
@@ -41,29 +37,23 @@
   <!-- app.js -->
   <script src="main/app.js"></script>
   <script src="schedule/schedule_service.js"></script>
+  <script src="announcements/announcements_service.js"></script>
+  <script src="admin/admin_service.js"></script>
   <!-- Angular Controller -->
   <script src="schedule/schedule_controller.js"></script>
+  <script src="announcements/announcements_controller.js"></script>
+  <script src="admin/admin_controller.js"></script>
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-
-
+  <!-- Angular UI-Router-->
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
   <div>
     <div ng-app="myApp" ui-view></div>
   </div>
-
-
-
-  <!-- Angular UI-Router -->
-  <script src="js/angular-ui-router.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
-
-
-
 
 </body>
 

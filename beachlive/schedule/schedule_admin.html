@@ -5,8 +5,19 @@
         <h2>Schedule</h2>
     </div>
 
+    <!--<div class="box">-->
+        <div class="box-message">
+            <div class="row">
+                <!--<input type="file" id="file" name="file"/>-->
+                <input type="file" id="file" file-model="myFile"/>
+                <button ng-click="uploadFile()">Upload New Schedule</button>
+                <!--<a href="{{jsonUrl}}" download="schedule.json">Download Current Schedule</a>-->
+            </div>
+        </div>
+    <!--</div>-->
+
     <!--<div id="schedule" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">-->
-        <ul class="timeline timeline-centered" ng-repeat="(day,times) in schedule">
+        <ul class="timeline timeline-centered" active="true" ng-repeat="(day,times) in schedule">
             <li class="timeline-item period">
                 <div class="timeline-info"></div>
                 <div class="timeline-marker"></div>
