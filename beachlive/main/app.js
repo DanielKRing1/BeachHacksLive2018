@@ -1,12 +1,14 @@
 /** Firebase **/
 console.log("hi app");
+//REPLACE THIS WITH YOUR FIREBASE PROJECT (THIS ONE IS MINE)
 var config = {
-		apiKey: "AIzaSyAif6z5dFWTN2KdRgT60e6fkczE9qC2-Gw",
-		authDomain: "angulardemo-17478.firebaseapp.com",
-		databaseURL: "https://angulardemo-17478.firebaseio.com",
-		storageBucket: "angulardemo-17478.appspot.com",
-		messagingSenderId: "449211195314"
-	};
+    apiKey: "AIzaSyBInKVQWTepYKbcvrN2zOqk2vVuJFOUP6E",
+    authDomain: "roleauth.firebaseapp.com",
+    databaseURL: "https://roleauth.firebaseio.com",
+    projectId: "roleauth",
+    storageBucket: "",
+    messagingSenderId: "134934995956"
+    };
 firebase.initializeApp(config);
 
 var liveApp = angular.module('myApp', ['ui.router','firebase']);
@@ -18,20 +20,38 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         // HOME STATES AND NESTED VIEWS ========================================
+// <<<<<<< Updated upstream
         .state('public', {
             url: '/',
-						templateUrl: 'main/main.html'
+			templateUrl: 'main/main.html'
         })
-				.state('public.announcements', {
-          url: 'announcements',
-					templateUrl: 'announcements/announcements.html',
-					controller: 'admin_announcements_controller'
+		.state('public.announcements', {
+            url: 'announcements',
+            templateUrl: 'announcements/announcements.html',
+            // controller: 'admin_announcements_controller'
         })
         .state('public.schedule', {
-          url: 'schedule',
-					templateUrl: 'schedule/schedule_admin.html',
-					controller: 'admin_schedule_controller'
+            url: 'schedule',
+			templateUrl: 'schedule/schedule_admin.html',
+			// controller: 'admin_schedule_controller'
         })
+
+        //ADMIN
+        .state('admin', {
+            url: '/admin',
+            templateUrl: 'admin_main.html',
+            controller: 'admin_controller'
+        })
+        .state('admin.announcements', {
+            url: 'announcements',
+            templateUrl: 'announcements/admin_announcements.html',
+            controller: 'admin_announcements_controller'
+        })        
+        .state('admin.schedule', {
+            url: 'schedule',
+            templateUrl: 'schedule/admin_schedule.html',
+            controller: 'admin_schedule_controller'
+        })        
 				/**
 				.state('admin', {
             url: '/admin',
@@ -48,6 +68,7 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
 					templateUrl: 'schedule/schedule_admin.html',
 					controller: 'admin_schedule_controller'
         })**/
+
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
             // we'll get to this in a bit

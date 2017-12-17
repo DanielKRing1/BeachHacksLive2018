@@ -4,6 +4,13 @@
 
   <h1 class="tab-title">Announcements</h1>
 
+  <!-- ANNOUNCEMENT FORM -->
+  <h1>ADMIN</h1>
+  <form class="anncmnt-form" name="aForm" ng-submit="addAnnouncement()">
+    <input class="form-control" type="text" id="anncmnt-input" placeholder="Add Announcement" ng-model="announcement">
+    <button class="btn" type="submit" id="add-anncmnt-btn">Update</button>
+  </form>
+
   <!-- LIST OF ANNOUNCEMENTS -->
   <ul class="anncmnt-list list-group" active="true" ng-repeat="(key, announcement) in announcementList">
     <!-- ng-repeat="| orderBy: '-date'" -->

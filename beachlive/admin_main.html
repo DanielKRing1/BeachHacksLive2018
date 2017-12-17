@@ -6,6 +6,14 @@
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="nav navbar-nav navbar-left" ng-controller="login_controller">
+        <li class="nav-item">
+          <a>Welcome Admin</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" ng-click="logout()">logout</a>
+        </li>
+      </ul>      
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" ui-sref-active="active" >
           <!--<a class="nav-link" href="schedule/schedule.html">Schedule</a>-->
@@ -82,37 +90,3 @@
     </div>
   </div>
 </footer>
-
-   <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex='-1' role="dialog" ng-controller="login_controller">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4></span>Admin Login Only</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>          
-        </div>
-        <div style="padding-top: 5px; padding-left: 10px; font-size: 15px; color:red;" ng-show="error">Failed Login!</div>
-        <div class="modal-body">
-          <form role="form" name="myForm" novalidate>
-            <div class="form-group">
-              <input type="text" class="form-control" name="username" ng-model="username" placeholder="Username" required>
-              <span style="color:red; font-size:15px" ng-show="myForm.username.$dirty && myForm.username.$invalid">
-              <div><span ng-show="myForm.username.$error.required">Username is required.</span></div>
-              </span>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" name="password" ng-model="password" placeholder="Password" required="">
-              <span style="color:red; font-size:15px" ng-show="myForm.password.$dirty && myForm.password.$invalid">
-              <span ng-show="myForm.password.$error.required">Password is required.</span>
-              </span>              
-            </div>
-              <button type="submit" ng-click="login(username, password)" class="btn btn-block"></span>Login</button>
-          </form>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-

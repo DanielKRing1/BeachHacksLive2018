@@ -2,7 +2,7 @@ liveApp.controller('admin_controller', ["$scope", "LoginService", "$state", func
 	//Kicks user out if they are not logged in
 	console.log("Entered admin_controller!");
 	if(!LoginService.checkLogin()){
-		console.log("Kicked o4ut");
+		console.log("Kicked odut");
 		LoginService.logout();
 		$state.go("public.announcements");
 	}

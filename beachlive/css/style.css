@@ -487,3 +487,18 @@ Displaying styles.css.
 .marker-outline .timeline-item:hover .timeline-marker:before {
   background: #FF6B6B;
 }
+
+/*----------------------------------------------
+    LOGIN MODAL STYLING
+----------------------------------------------*/
+.modal-header, h4, .close {
+    background-color: #0085a1;
+    color:white !important;
+    text-align: center;
+    /*font-size: 30px;*/
+}
+.btn-block {
+  color:white !important;
+  background-color: #0085a1;
+  border-color: #0085a1;
+}
