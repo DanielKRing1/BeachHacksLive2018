@@ -20,7 +20,6 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         // HOME STATES AND NESTED VIEWS ========================================
-// <<<<<<< Updated upstream
         .state('public', {
             url: '/',
 			templateUrl: 'main/main.html'
@@ -32,14 +31,15 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('public.schedule', {
             url: 'schedule',
-			templateUrl: 'schedule/schedule_admin.html',
+			templateUrl: 'schedule/schedule.html',
 			// controller: 'admin_schedule_controller'
         })
+        
 
         //ADMIN
         .state('admin', {
             url: '/admin',
-            templateUrl: 'admin_main.html',
+            templateUrl: 'admin/admin_main.html',
             controller: 'admin_controller'
         })
         .state('admin.announcements', {
@@ -51,23 +51,7 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
             url: 'schedule',
             templateUrl: 'schedule/admin_schedule.html',
             controller: 'admin_schedule_controller'
-        })        
-				/**
-				.state('admin', {
-            url: '/admin',
-						templateUrl: 'main/main.html',
-						controller: 'admin/login_controller'
         })
-				.state('admin.announcements', {
-          url: '/admin/announcements',
-					templateUrl: 'announcements/announcements.html',
-					controller: 'admin_announcements_controller'
-        })
-				.state('admin.schedule', {
-          url: '/admin/schedule',
-					templateUrl: 'schedule/schedule_admin.html',
-					controller: 'admin_schedule_controller'
-        })**/
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
