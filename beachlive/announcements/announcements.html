@@ -1,18 +1,19 @@
 <div class="container">
-<!-- ANNOUNCEMENTS -->
-<div class="anncmnt-tab" ng-controller="admin_announcements_controller">
+  <!-- ANNOUNCEMENTS -->
+  <div class="anncmnt-tab" ng-controller="announcements_controller">
 
-  <h1 class="tab-title">Announcements</h1>
+    <h1 class="tab-title">Announcements</h1>
 
-  <!-- LIST OF ANNOUNCEMENTS -->
-  <ul class="anncmnt-list list-group" active="true" ng-repeat="(key, announcement) in announcementList">
-    <!-- ng-repeat="| orderBy: '-date'" -->
-    <li class="anncmnt list-group-item">
-      <div class="row">
-        <h5 class="col-sm-3 anncmnt-item">{{announcement.time | date:'EEEE h:mm a'}}</h5>
-        <h5 class="col-sm-9 anncmnt-item">{{announcement.description}}</h5>
-      </div>
-    </li>
-  </ul>
-</div>
+
+    <!-- LIST OF ANNOUNCEMENTS -->
+    <ul class="list-group" ng-repeat="anncmt in announcementList | orderBy:'':true">
+      <li class="list-group-item">
+        <div class="row">
+          <h5 class="col-sm-3 anncmnt-item">{{anncmt.time | date: 'EEEE h:mm a'}}</h5>
+          <h5 class="col-sm-9 anncmnt-item">{{anncmt.description}}</h5>
+        </div>
+      </li>
+    </ul>
+
+  </div>
 </div>

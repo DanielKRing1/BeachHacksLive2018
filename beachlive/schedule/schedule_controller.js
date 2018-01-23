@@ -1,6 +1,4 @@
-liveApp.controller('admin_schedule_controller', ["$rootScope","$scope","$timeout","ScheduleService",function($rootScope,$scope,$timeout,ScheduleService){
-		console.log("hi admin controller");
-
+liveApp.controller('schedule_controller', ["$rootScope","$scope","$timeout","ScheduleService",function($rootScope,$scope,$timeout,ScheduleService){
 
 			ScheduleService.updateSchedule(function() {
 				console.log("hi callback called me");
@@ -8,20 +6,14 @@ liveApp.controller('admin_schedule_controller', ["$rootScope","$scope","$timeout
 				$scope.$apply(function() {
 					$rootScope.schedule = ScheduleService.getSchedule();
 				});
+				console.log("outside admin" + $rootScope.schedule);
 				//console.log($scope.schedule);
 			});
-	  //ScheduleService.addScheduleCallback(updateSchedule);
-
-		console.log("outside admin" + $scope.schedule);
-
 
 		$scope.uploadFile = function() {
 			console.log("upload");
 			var f = document.getElementById('file').files[0],
 	      	r = new FileReader();
-
-	    	//console.log(JSON.stringify(json)); // this will show the info it in firebug console
-			//console.log(r.readAsBinaryString(f));
 
 			r.onload = (function (f) {
 			return function (e) {

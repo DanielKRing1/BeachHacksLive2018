@@ -1,0 +1,121 @@
+<div class="container">
+  <div ng-controller="mentors_controller">
+    <h1 class="tab-title">Request a Mentor</h1>
+
+    <!-- ADMIN -->
+    <h1>Admin</h1>
+    <form class="anncmnt-form" ng-submit="addMentor()">
+      <input class="form-control" type="text" placeholder="Add Mentor to List" ng-model="newMentor">
+      <button class="btn" type="submit">Add</button>
+    </form>
+
+    <ul class="list-group" ng-repeat="mentor in mentorList | orderBy:'':true">
+      <!--Repeat for each in array-->
+      <li class="mentor list-group-item">
+        <div class="row">
+          <h5 class="col-sm-4 mentor-item">{{mentor.name}}</h5>
+          <h5 class="col-sm-2 mentor-item" ng-show="mentor.available">Available</h5>
+          <h5 class="col-sm-2 mentor-item" ng-show="!mentor.available">Unavailable</h5>
+          <form class="col-sm-4 mentor-item">
+            <label class="switch mentor-item">
+              <input type="checkbox" ng-model="mentor.available" ng-change=setAvailability(mentor.$id,mentor.available)>
+              <span class="slider round"></span>
+            </label>
+          </form>
+          <button type="button" class="btn btn-xs" ng-click="deleteMentor(mentor.$id)">X</button>
+        </div>
+      </li>
+    </ul>
+
+
+    <h5>All Requests</h5>
+    <ul class="list-group">
+      <li class="mentor list-group-item">
+        <div class="row">
+          <h5 class="col-sm-3">Requested By</h5>
+          <h5 class="col-sm-1">Table #</h5>
+          <h5 class="col-sm-3">Time Requested</h5>
+          <h5 class="col-sm-2">Mentor</h5>
+          <h5 class="col-sm-3">Time Accepted</h5>
+        </div>
+      </li>
+    </ul>
+    <ul class="list-group" ng-repeat="request in requestList | orderBy:'':true">
+      <li class="mentor list-group-item">
+        <div class="row">
+          <h5 class="col-sm-3 mentor-item">{{request.name | limitTo: 15}}</h5>
+          <h5 class="col-sm-1 mentor-item">{{request.table | limitTo: 15}}</h5>
+          <h5 class="col-sm-3 mentor-item">{{request.requestTime | date: 'EEEE h:mm a'}}</h5>
+          <div ng-show="request.pending">
+            <form>
+              <label class="mentor-item">
+                <select ng-model="mentorAccept.mentorObj[$index]" class="form-control" ng-options="mentor.name for mentor in mentorList | filter:{available: true}">
+                    <option value="">Pending</option>
+                </select>
+              </label>
+              <button class="btn delete-mentor-btn" ng-click="acceptRequest(request.$id,$index)">Submit</button>
+            </form>
+          </div>
+          <h5 class="col-sm-2 mentor-item" ng-if="!request.pending">{{request.mentorName}}</h5>
+          <h5 class="col-sm-3 mentor-item" ng-if="!request.pending">{{request.acceptTime | date: 'EEEE h:mm a'}}</h5>
+        </div>
+      </li>
+    </ul>
+
+
+        <!-- REQUEST FORM -->
+        <div class="row">
+            <div class="column col-sm-6 mentor-item" id="mentor-request-form">
+              <form name="requestForm" class="list-group-item request-form" ng-submit="requestForm.$valid && addRequest()" novalidate>
+                <div>
+                  <fieldset class="form-group">
+                    <input class="form-control" name="name" type="text" id="mentor-request-form" placeholder="Your name" ng-model="requestInfo.name" required>
+                  </fieldset>
+
+                  <fieldset class="form-group">
+                    <select ng-model="requestInfo.technology" class="form-control" id="mentor-request-form" ng-options="item for item in tech" required>
+                      <option value="">Choose type of tech</option>
+                    </select>
+                  </fieldset>
+
+                  <fieldset class="form-group">
+                    <textarea class="form-control" type="text" id="mentor-request-form" placeholder="Describe your problem" ng-model="requestInfo.description" required></textarea>
+                    <input class="form-control col-sm-6" id="mentor-request-form" type="number" min="0" max="99" placeholder="Table #" ng-model="requestInfo.table" required>
+                  </fieldset>
+                  <button class="btn" id="add-anncmnt-btn" type="submit">Submit</button>
+
+                </div>
+              </form>
+            </div>
+
+          <!-- PENDING -->
+            <div class="column col-sm-6 mentor-item" id="mentor-request-form">
+              <h1>Request Waitlist</h1>
+
+              <ul class="list-group">
+                <li class="mentor list-group-item">
+                  <div class="row">
+                    <h5 class="col-sm-1 mentor-item">#</h5>
+                    <h5 class="col-sm-5 mentor-item">Name</h5>
+                    <h5 class="col-sm-5 mentor-item">Time Requested</h5>
+                  </div>
+                </li>
+              </ul>
+                <ul class="list-group" ng-repeat="(key,request) in requestList | filter:{pending: true}">
+                  <li class="mentor list-group-item">
+                    <div class="row">
+                      <h5 class="col-sm-1 mentor-item">{{key+1}}</h5>
+                      <h5 class="col-sm-5 mentor-item">{{request.name}}</h5>
+                      <h5 class="col-sm-5 mentor-item">{{request.requestTime | date: 'EEEE h:mm a'}}</h5>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+          </div>
+
+  </div>
+</div>
+
+<!--
+
+-->

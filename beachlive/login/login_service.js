@@ -1,4 +1,4 @@
-liveApp.service('LoginService', function($window) {
+liveApp.service('LoginService', function() {
 
     var user = firebase.auth().currentUser;
 
@@ -7,6 +7,7 @@ liveApp.service('LoginService', function($window) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
+          console.log(errorMessage);
           logout();
         }).then(function(){
             user = firebase.auth().currentUser;
@@ -36,10 +37,8 @@ liveApp.service('LoginService', function($window) {
     var service = {
         login               : login,
         checkLogin          : checkLogin,
-        logout              : logout,
+        logout              : logout
     };
 
     return service;
 });
-
-

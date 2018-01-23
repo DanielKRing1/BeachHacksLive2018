@@ -4,7 +4,7 @@ liveApp.service('ScheduleService', function() {
 
     var getSchedule = function () {
        return schedule;
-     }
+     };
 
     firebase.database().ref('/schedule').on("value", function(snapshot) {
       schedule = JSON.parse(snapshot.val());

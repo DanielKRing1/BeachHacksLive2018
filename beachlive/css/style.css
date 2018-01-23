@@ -1,73 +1,66 @@
-
-Attachment WIN_20171212_20_33_51_ProTrim.mp4 successfully uploaded and added.Conversation opened. 3 messages. All messages read.
-
-
-Skip to content
-Using Gmail with screen readers
-2
-Search
-
-
-
-Click here to enable desktop notifications for Gmail.   Learn more  Hide
-Gmail
-COMPOSE
-Labels
-Inbox (4)
-Starred
-Important
-Sent Mail
-Drafts (10)
-Categories
-Notes
-More
-Hangouts
-
-
-
-
-  More
-6 of 2,269
-
-Expand all Print all In new window
-Beach Hacks Live NOT labeled
-Inbox
-x
-
-Asianpersonn
-​ background.jpg ​​ campus_map.png ​​ csulb_pyramid.jpg ​​ firebase-messaging...
-10:44 PM (18 hours ago)
-
-Asianpersonn
-Attachments10:55 PM (18 hours ago)
-
-to me, Daniel
-Check these files instead, more organized.
-App.js is in a txt file
-
-11 Attachments
-
-
-Victoria Hong <victoriahong96@gmail.com>
-11:02 PM (18 hours ago)
-
-to Asianpersonn
-ty
-
-
-Click here to Reply or Forward
-1.31 GB (8%) of 15 GB used
-Manage
-Terms - Privacy
-Last account activity: 50 minutes ago
-Details
-
-
-
-body {
-  background: url("../background.jpg") no-repeat center top;
-  background-size: cover;
+.accept-request-btn {
+  display:
 }
+
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 60px;
+ height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 26px;
+ width: 26px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked + .slider {
+ background-color: #2196F3;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(26px);
+ -ms-transform: translateX(26px);
+ transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
+
 
 .cool {
   text-align: center;
@@ -101,6 +94,7 @@ a {
   color: Cyan;
 }
 
+/**
 .tab-nav-item.list-group-item:first-child {
   border-top-right-radius: 0px;
 }
@@ -109,7 +103,7 @@ a {
   border-top-right-radius: .25rem;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-}
+}**/
 .tab-nav-item {
   display: inline-block;
   width: 12%;
@@ -138,17 +132,13 @@ a {
 .tab-title {
   color: Black;
 }
-.tab-container {
-  background: url("../csulb_pyramid.jpg") no-repeat center top;
-  padding: 15px 35px 15px 35px;
-}
+
 
 .btn.form-control {
   outline: none;
   background-color: transparent;
   color: Gray;
 }
-
 /* ANNOUNCEMENTS */
 .anncmnt {
   color: DarkGray;
@@ -204,7 +194,7 @@ a {
   width: 40%;
 }
 .delete-mentor-btn {
-  margin: 10px;
+  height: 20%;
 }
 
 /* General User */

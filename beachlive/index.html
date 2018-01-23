@@ -1,55 +1,60 @@
-<meta name="author" content="">
 <!DOCTYPE html>
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<!-- Angular UI-Router-->
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-messaging.js"></script>
+
+<!-- app.js -->
+<script src="main/app.js"></script>
+<!-- Angular Controller -->
+<script src="admin/admin_controller.js"></script>
+<script src="login/login_controller.js"></script>
+<script src="announcements/announcements_controller.js"></script>
+<script src="schedule/schedule_controller.js"></script>
+<script src="mentors/mentors_controller.js"></script>
+
+
+
 <html lang="en">
 
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
 
-  <title>Clean Blog - Start Bootstrap Theme</title>
+  <title>BeachHacks</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
 
-  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-messaging.js"></script>
+
   <!-- Controllers -->
-  <!-- app.js -->
-  <script src="main/app.js"></script>
-  <script src="schedule/schedule_service.js"></script>
-  <script src="announcements/announcements_service.js"></script>
-  <script src="admin/admin_service.js"></script>
-  <!-- Angular Controller -->
-  <script src="schedule/schedule_controller.js"></script>
-  <script src="announcements/announcements_controller.js"></script>
-  <script src="admin/admin_controller.js"></script>
-  <!-- Login Controller -->
   <script src="login/login_service.js"></script>
-  <script src="login/login_controller.js"></script>
-  <!-- AngularFire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-  <!-- Angular UI-Router-->
-  <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="schedule/schedule_service.js"></script>
+
   <div>
     <div ng-app="myApp" ui-view></div>
   </div>
