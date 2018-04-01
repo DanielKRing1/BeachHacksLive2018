@@ -5,18 +5,14 @@ liveApp.controller('announcements_controller', ["$scope","$timeout","$filter","$
 		var rootRef = firebase.database().ref();
     var ref = rootRef.child("announcements");
 		$scope.announcementList = $firebaseArray(ref);
+		$scope.announcementList.$loaded(
+			function(data) {
+				annCount = data.length;
+				setInterval(checkForNewAnn, 1000);
+			});
 
 		var annCount;
 
-		window.onload = function(){
-			$scope.announcementList = $firebaseArray(ref);
-
-			$scope.announcementList.$loaded(
-				function(data) {
-					annCount = data.length;
-					setInterval(checkForNewAnn, 1000);
-				});
-		};
 
     $scope.addAnnouncement = function() {
 			if($scope.newAnnouncement !== ''){
@@ -33,7 +29,8 @@ liveApp.controller('announcements_controller', ["$scope","$timeout","$filter","$
 		function checkForNewAnn(){
 			if(annCount < $scope.announcementList.length){
 				annCount = $scope.announcementList.length;
-				displayNotification($scope.announcementList[0]);
+				newestAnn = $scope.announcementList.length-1;
+				displayNotification($scope.announcementList[newestAnn]);
 			}
 		};
 
