@@ -16,7 +16,6 @@ self.addEventListener('notificationclick', function(e) {
       const allClients = await clients.matchAll({includeUncontrolled: true});
 
       if(allClients.length > 0){
-        allClients[0].navigate('http://localhost:8001/beachlive/#!/announcements');
         allClients[0].focus();
       }else{
         clients.openWindow('http://localhost:8001/beachlive/#!/announcements');
