@@ -63,4 +63,30 @@ liveApp.config(function($stateProvider, $urlRouterProvider) {
       			controller: 'mentors_controller'
         })
 
+
+
+	  // Check if NOTIFICATION API supported
+	  if ("Notification" in window) {
+	    // Get PERMISSION to display Notifications
+	    Notification.requestPermission().then(function(status){
+	      //console.log('Notification permission status: ', status);
+	    });
+	  }else{
+	    console.warn('This browser does not support Notifiation API')
+	  }
+
+	  // Check if PUSH API supported
+	  if ('serviceWorker' in navigator) {
+	    window.addEventListener('load', function() {
+	      // REGISTER Service Worker
+	      navigator.serviceWorker.register('sw.js').then(function(reg) {
+	        console.log('ServiceWorker registration successful: ', reg);
+	      }, function(err) {
+	        console.log('ServiceWorker registration failed: ', err);
+	      });
+	    });
+	  }else{
+	    console.warn('This browser does not have a registered Service Worker');
+	  }
+
 });
