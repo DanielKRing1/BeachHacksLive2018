@@ -9,23 +9,23 @@
           <h1>Begin a request</h1>
             <button class="btn" ng-click="startRequest()">Request</button>
         </div>
-        <div class="column col-sm-6 mentor-item" ng-if="isRequesting" id="mentor-request-form">
+        <div class="column col-sm-6 mentor-item" ng-if="isRequesting">
           <h1 class="tab-title">Request a Mentor</h1>
           <form name="requestForm" class="list-group-item request-form" ng-submit="requestForm.$valid && addRequest()" novalidate>
             <div>
               <fieldset class="form-group">
-                <input class="form-control" name="name" type="text" id="mentor-request-form" placeholder="Your name" ng-model="requestInfo.name" required>
+                <input class="form-control" name="name" type="text" placeholder="Your name" ng-model="requestInfo.name" required>
               </fieldset>
 
               <fieldset class="form-group">
-                <select ng-model="requestInfo.technology" class="form-control" id="mentor-request-form" ng-options="item for item in tech" required>
+                <select ng-model="requestInfo.technology" class="form-control" ng-options="item for item in tech" required>
                   <option value="">Choose type of tech</option>
                 </select>
               </fieldset>
 
               <fieldset class="form-group">
-                <textarea class="form-control" type="text" id="mentor-request-form" placeholder="Describe your problem" ng-model="requestInfo.description" required></textarea>
-                <input class="form-control col-sm-6" id="mentor-request-form" type="number" min="0" max="99" placeholder="Table #" ng-model="requestInfo.table" required>
+                <textarea class="form-control" type="text" placeholder="Describe your problem" ng-model="requestInfo.description" required></textarea>
+                <input class="form-control col-sm-6" type="number" min="0" max="99" placeholder="Table #" ng-model="requestInfo.table" required>
               </fieldset>
               <button class="btn" id="add-anncmnt-btn" type="submit">Submit</button>
             </div>
@@ -33,7 +33,7 @@
         </div>
 
       <!-- PENDING -->
-        <div class="column col-sm-6 mentor-item" id="mentor-request-form">
+        <div class="column col-sm-6 mentor-item">
           <h1>Request Waitlist</h1>
 
           <ul class="list-group">
