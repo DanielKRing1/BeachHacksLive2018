@@ -38,7 +38,6 @@ liveApp.controller('announcements_controller', ["$scope","$timeout","$filter","$
 			}
 		};
 
-
 		function displayNotification(a){
 
 			if(Notification.permission === 'granted'){
