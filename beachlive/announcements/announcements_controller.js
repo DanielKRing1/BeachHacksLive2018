@@ -4,7 +4,7 @@ liveApp.controller('announcements_controller', ["$scope","$timeout","$filter","$
 
 		var rootRef = firebase.database().ref();
     var ref = rootRef.child("announcements");
-		$scope.announcementList;
+		$scope.announcementList = $firebaseArray(ref);
 
 		var annCount;
 
@@ -25,7 +25,6 @@ liveApp.controller('announcements_controller', ["$scope","$timeout","$filter","$
 						 a.description = $scope.newAnnouncement;
 						 ref.push(a);
 						 $scope.newAnnouncement = '';
-
 			}
 		};
 
