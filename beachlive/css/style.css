@@ -130,7 +130,7 @@ a {
 
 /* TABS */
 .tab-title {
-  color: Black;
+  /*color: Black;*/
 }
 
 
@@ -185,7 +185,7 @@ a {
 /* MENTOR */
 /* Admin */
 .mentor {
-  color: DarkGray;
+  color: black;
   display: inline-block;
 }
 
@@ -575,4 +575,23 @@ footer ul li .fa {
 
 footer ul li:hover .fa {
   color: #fff;
+}
+body {
+  padding-top: 65px;
+}
+.list-group-item {
+  background: rgba(255,255,255,0.5);
+  color: black;
+}
+/*ul li {
+  background: rgba(255,255,255,0);
+}*/
+.bgimg1 {
+  /*background-image: url("../img/main.JPG");*/
+  background: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)), url("../img/main.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*opacity: 0.9;*/
+  /*background: rgba(255,255,255,0.5);*/
 }

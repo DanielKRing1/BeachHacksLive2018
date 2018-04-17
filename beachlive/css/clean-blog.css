@@ -5,7 +5,7 @@
  */
 body {
   font-size: 20px;
-  color: #212529;
+  color: white;
   font-family: 'Lora', 'Times New Roman', serif; }
 
 p {
@@ -23,6 +23,9 @@ h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+h5 {
+  /*color: black;*/
+}
 a {
   color: #212529;
   -webkit-transition: all 0.2s;
@@ -287,7 +290,14 @@ header.masthead {
 
 .floating-label-form-group-with-focus label {
   color: #0085A1; }
+  
+.form-group {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
+.form-control {
+  background: rgba(255, 255, 255, 0.5);
+}
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6; }
 
@@ -308,7 +318,9 @@ footer {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: rgba(255, 255, 255, 0.5);
+  }
 
 .btn-primary {
   background-color: #0085A1;

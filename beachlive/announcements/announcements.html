@@ -1,13 +1,14 @@
-<div class="container">
+<div class="container" ">
   <!-- ANNOUNCEMENTS -->
   <div class="anncmnt-tab" ng-controller="announcements_controller">
 
-    <h1 class="tab-title">Announcements</h1>
+    <h2>Announcements</h2>
 
 
     <!-- LIST OF ANNOUNCEMENTS -->
-    <ul class="list-group" ng-repeat="anncmt in announcementList | orderBy:'':true">
-      <li class="list-group-item">
+    <ul class="list-group" style = "color: black;" ng-repeat="anncmt in announcementList | orderBy:'':true">
+      <!-- <li class="list-group-item" style = "background: rgba(255,255,255,0); border: 1pt solid rgba(0,0,0, 1);"> -->
+        <li class="list-group-item">
         <div class="row">
           <h5 class="col-sm-3 anncmnt-item">{{anncmt.time | date: 'EEEE h:mm a'}}</h5>
           <h5 class="col-sm-9 anncmnt-item">{{anncmt.description}}</h5>

@@ -6,11 +6,11 @@
     <!-- REQUEST FORM -->
     <div class="row">
         <div class="column col-sm-6" ng-show="!isRequesting">
-          <h1>Begin a request</h1>
+          <h2>Begin a request</h2>
             <button class="btn" ng-click="startRequest()">Request</button>
         </div>
         <div class="column col-sm-6 mentor-item" ng-if="isRequesting">
-          <h1 class="tab-title">Request a Mentor</h1>
+          <h2 class="tab-title">Request a Mentor</h2>
           <form name="requestForm" class="list-group-item request-form" ng-submit="requestForm.$valid && addRequest()" novalidate>
             <div>
               <fieldset class="form-group">
@@ -34,7 +34,7 @@
 
       <!-- PENDING -->
         <div class="column col-sm-6 mentor-item">
-          <h1>Request Waitlist</h1>
+          <h2>Request Waitlist</h2>
 
           <ul class="list-group">
             <li class="mentor list-group-item">
