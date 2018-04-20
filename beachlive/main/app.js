@@ -92,8 +92,10 @@ liveApp.controller('notif-ctrl', ["$scope","$filter","$firebaseArray", function(
   var ref = rootRef.child("announcements");
   $scope.announcementList = $firebaseArray(ref);
 
+  // Wait for initial add of data
   $scope.announcementList.$loaded(
     function(data) {
+      // Display notif when 'child_added'
       $scope.announcementList.$watch(function(e) {
         if(e.event == 'child_added'){
           var newestAnn = $scope.announcementList.length-1;
