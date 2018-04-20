@@ -91,23 +91,17 @@ liveApp.controller('notif-ctrl', ["$scope","$filter","$firebaseArray", function(
   var rootRef = firebase.database().ref();
   var ref = rootRef.child("announcements");
   $scope.announcementList = $firebaseArray(ref);
+
   $scope.announcementList.$loaded(
     function(data) {
-      annCount = data.length;
-      setInterval(checkForNewAnn, 1000);
+      $scope.announcementList.$watch(function(e) {
+        if(e.event == 'child_added'){
+          var newestAnn = $scope.announcementList.length-1;
+
+          displayNotification($scope.announcementList[newestAnn]);
+        }
+      });
     });
-
-    var annCount;
-
-    // Notification display
-    function checkForNewAnn(){
-      if(annCount < $scope.announcementList.length){
-        annCount = $scope.announcementList.length;
-        newestAnn = $scope.announcementList.length-1;
-
-        displayNotification($scope.announcementList[newestAnn]);
-      }
-    };
 
     function displayNotification(a){
 
